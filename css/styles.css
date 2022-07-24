@@ -1,0 +1,445 @@
+:root {
+  --text-color-blck: #212121;
+  --accent-color: #2196f3;
+  --text-color-wht: #ffffff;
+  --text-color-gray: #757575;
+  --text-color-soc: #afb1b8;
+  --drk-bg: #2f303a;
+  --light-bg: #f5f4fa;
+  --gradient: linear-gradient(
+    to right,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+  );
+  --white-rgba: rgba(255, 255, 255, 0.6);
+  --card-gap: 30px;
+  --card-item: 3;
+}
+
+body {
+  font-family: "Roboto";
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--text-color-gray);
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--card-gap);
+}
+.card-item {
+  flex-basis: calc(
+    (100% - (var(--card-item) - 1) * var(--card-gap)) / var(--card-item)
+  );
+}
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.link {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.list {
+  list-style: none;
+}
+
+/* Header */
+.header {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  border: 1px solid #ececec;
+}
+.logo {
+  text-decoration: none;
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.16;
+  color: var(--accent-color);
+}
+.black {
+  color: var(--text-color-blck);
+}
+.white {
+  color: var(--text-color-wht);
+}
+
+.header-link:hover {
+  color: var(--accent-color);
+}
+.header-link:focus {
+  color: var(--accent-color);
+}
+.nav {
+  color: var(--text-color-blck);
+}
+.contact-mail {
+  fill: currentColor;
+  margin-right: 10px;
+}
+.header-link a:hover,
+.header-link a:focus {
+  color: var(--accent-color);
+}
+
+/* Header */
+.header .logo {
+  margin-right: 93px;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+}
+.nav {
+  display: flex;
+  align-items: center;
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.header-link {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.contact-list {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-left: auto;
+}
+/* Секція Герой */
+
+.section-hero {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: var(--gradient), url(../images/indeximg/backhero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-color: var(--drk-bg);
+  text-align: center;
+}
+.title-hero {
+  max-width: 696px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 30px;
+}
+.btn-hero {
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: var(--text-color-wht);
+  min-width: 200px;
+  padding: 10px 32px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+  font-family: inherit;
+  border: none;
+}
+
+/* Секція опису роботи */
+
+.description-list {
+  --card-item: 4;
+}
+
+.description-title {
+  font-weight: 700;
+  line-height: 1.14;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.descrip-other {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  border-radius: 4px;
+  background: var(--light-bg);
+  margin-bottom: 30px;
+}
+
+/* Секція про нас */
+.about {
+  padding-top: 0px;
+}
+.section-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Секція наша Команда */
+
+.team-list {
+  --card-item: 4;
+}
+.team {
+  background-color: var(--light-bg);
+}
+.title-team {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+}
+.team-name {
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: var(--text-color-blck);
+}
+.team-text .team-name {
+  font-size: 16px;
+  line-height: 1.18;
+}
+.team-text {
+  font-weight: 400px;
+  margin-bottom: 16px;
+}
+.comand-item {
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-content {
+  padding: 30px;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.socials-icon {
+  fill: var(--text-color-soc);
+}
+.socials-link:hover,
+.socials-link:focus {
+  background-color: var(--accent-color);
+}
+.socials-link:hover .socials-icon,
+.socials-link:focus .socials-icon {
+  fill: var(--text-color-wht);
+}
+
+/* Постійні клієнти */
+
+.regular-title {
+  text-align: center;
+  font-size: 36px;
+  line-height: 1.16em;
+  font-weight: 700;
+  color: var(--text-color-blck);
+  margin-bottom: 50px;
+}
+
+.regular-item .link {
+  display: flex;
+  align-items: center;
+  padding: 16px 32px;
+  justify-content: center;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  color: var(--text-color-soc);
+}
+.regular-icon {
+  fill: currentColor;
+}
+.regular-item .link:hover,
+.regular-item .link:focus {
+  color: var(--accent-color);
+}
+.regular-list {
+  --card-item: 6;
+  --card-gap: 25px;
+}
+/* Секція футер */
+.footer-container {
+  display: flex;
+  gap: 70px;
+  align-items: baseline;
+}
+
+.adress-container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.adress {
+  font-style: inherit;
+  color: var(--white-rgba);
+}
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--text-color-blck);
+}
+
+.footer-link:hover {
+  color: var(--accent-color);
+}
+
+.footer-link:focus {
+  color: var(--accent-color);
+}
+.footer .logo {
+  margin-bottom: 20px;
+  display: block;
+}
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.footer-title {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--text-color-wht);
+  margin-bottom: 20px;
+}
+/* Social-Footer */
+.footer-cta .socials-link {
+  fill: var(--text-color-wht);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer-cta .socials-link:hover,
+.footer-cta .socials-link:focus{
+    background-color: var(--accent-color);
+
+}
+
+/* Портфолио */
+
+.filter-btn {
+  text-align: center;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  padding: 6px 22px;
+}
+.filter-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  gap: 8px;
+}
+
+.filter-link {
+  align-items: center;
+}
+
+.filter-btn:hover {
+  background-color: var(--accent-color);
+  color: var(--text-color-wht);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.filter-btn:focus {
+  background-color: var(--accent-color);
+  color: var(--text-color-wht);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.work-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  color: var(--text-color-blck);
+  margin-bottom: 4px;
+}
+.work-text {
+  font-size: 16px;
+  line-height: 1.87;
+}
+.work-item {
+  background-color: var(--text-color-wht);
+}
+.work-description {
+  padding: 20px 24px;
+  background: var(--text-color-wht);
+  border: 1px solid #eeeeee;
+}
+.work-list .link {
+  display: flex;
+  flex-direction: column;
+}
+.work-list .work-item .link:hover,
+.work-list .work-item .link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
