@@ -14,6 +14,7 @@
   --white-rgba: rgba(255, 255, 255, 0.6);
   --card-gap: 30px;
   --card-item: 3;
+  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -96,9 +97,11 @@ img {
 
 .header-link:hover {
   color: var(--accent-color);
+  transition: color 250ms var(--cubic);
 }
 .header-link:focus {
   color: var(--accent-color);
+  transition: color 250ms var(--cubic);
 }
 .nav {
   color: var(--text-color-blck);
@@ -110,6 +113,7 @@ img {
 .header-link a:hover,
 .header-link a:focus {
   color: var(--accent-color);
+  transition: color 250ms var(--cubic);
 }
 
 /* Header */
@@ -279,10 +283,12 @@ img {
 .socials-link:hover,
 .socials-link:focus {
   background-color: var(--accent-color);
+  transition: background-color 250ms var(--cubic);
 }
 .socials-link:hover .socials-icon,
 .socials-link:focus .socials-icon {
   fill: var(--text-color-wht);
+  transition: fill 250ms var(--cubic);
 }
 
 /* Постійні клієнти */
@@ -311,6 +317,7 @@ img {
 .regular-item .link:hover,
 .regular-item .link:focus {
   color: var(--accent-color);
+  transition: color 250ms var(--cubic);
 }
 .regular-list {
   --card-item: 6;
@@ -339,10 +346,12 @@ img {
 
 .footer-link:hover {
   color: var(--accent-color);
+  transition: color 250ms var(--cubic);
 }
 
 .footer-link:focus {
   color: var(--accent-color);
+  transition: color 250ms var(--cubic);
 }
 .footer .logo {
   margin-bottom: 20px;
@@ -372,6 +381,7 @@ img {
 .footer-cta .socials-link:hover,
 .footer-cta .socials-link:focus{
     background-color: var(--accent-color);
+    transition: background-color 250ms var(--cubic);
 
 }
 
@@ -406,6 +416,9 @@ img {
   color: var(--text-color-wht);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition: color 250ms var(--cubic),
+  box-shadow 250ms var(--cubic),
+  background-color 250ms var(--cubic);
 }
 
 .filter-btn:focus {
@@ -413,6 +426,9 @@ img {
   color: var(--text-color-wht);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+    transition: color 250ms var(--cubic),
+    box-shadow 250ms var(--cubic),
+    background-color 250ms var(--cubic);
 }
 
 .work-title {
@@ -442,4 +458,50 @@ img {
 .work-list .work-item .link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: box-shadow 250ms var(--cubic);
+}
+/* Modal */
+
+.backdrop{
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  height: 100%;
+  width: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.backdrop.is-hidden{
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.modal{
+  position: relative;
+  width: 528px;
+  height: 581px;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.modal-btn{
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  top: 8px;
+  right: 8px;
+
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--text-color-wht);
+  cursor: pointer;
 }
