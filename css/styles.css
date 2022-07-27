@@ -95,13 +95,10 @@ img {
   color: var(--text-color-wht);
 }
 
-.header-link:hover {
+.header-link:hover, 
+ .header-link:focus {
   color: var(--accent-color);
-  transition: color 250ms var(--cubic);
-}
-.header-link:focus {
-  color: var(--accent-color);
-  transition: color 250ms var(--cubic);
+  
 }
 .nav {
   color: var(--text-color-blck);
@@ -113,7 +110,6 @@ img {
 .header-link a:hover,
 .header-link a:focus {
   color: var(--accent-color);
-  transition: color 250ms var(--cubic);
 }
 
 .active-page{
@@ -121,16 +117,17 @@ img {
   color: var(--accent-color);
 }
 
-.header-link::after{
+.active-page::after{
   content: '';
   position: absolute;
   display: block ;
   left: 0;
-  bottom: 0;
+  bottom: -1px;
+  border-radius: 4px;
   width: 100%;
   height: 5px;
   background-color: var(--accent-color );
-  transition: color 250ms var(--cubic), 
+ 
   
 }
 
@@ -156,6 +153,7 @@ img {
   align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
+  transition: color 250ms var(--cubic);
 }
 .contact-list {
   display: flex;
@@ -251,14 +249,11 @@ img {
   bottom: 0;
   margin: 0;
   font-weight: 700;
-  font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--text-color-wht);
   text-align: center;
-  padding-top: 27px;
-  padding-bottom: 27px;
+  padding: 27px;
   background: rgba(47, 48, 58, 0.8);
 }
 /* Секція наша Команда */
@@ -313,19 +308,22 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  transition: background-color 250ms var(--cubic);
+  
 }
 .socials-icon {
   fill: var(--text-color-soc);
+  transition: fill 250ms var(--cubic);
 }
 .socials-link:hover,
 .socials-link:focus {
   background-color: var(--accent-color);
-  transition: background-color 250ms var(--cubic);
+  
 }
 .socials-link:hover .socials-icon,
 .socials-link:focus .socials-icon {
   fill: var(--text-color-wht);
-  transition: fill 250ms var(--cubic);
+  
 }
 
 /* Постійні клієнти */
@@ -342,11 +340,12 @@ img {
 .regular-item .link {
   display: flex;
   align-items: center;
-  padding: 16px 32px;
+  padding: 16px 30px;
   justify-content: center;
   border: 1px solid currentColor;
   border-radius: 4px;
   color: var(--text-color-soc);
+  transition: color 250ms var(--cubic);
 }
 .regular-icon {
   fill: currentColor;
@@ -354,17 +353,20 @@ img {
 .regular-item .link:hover,
 .regular-item .link:focus {
   color: var(--accent-color);
-  transition: color 250ms var(--cubic);
+  
 }
 .regular-list {
   --card-item: 6;
-  --card-gap: 25px;
+  --card-gap: 30px;
 }
 /* Секція футер */
 .footer-container {
   display: flex;
   gap: 70px;
   align-items: baseline;
+}
+.footer-link{
+  transition: color 250ms var(--cubic);
 }
 
 .adress-container {
@@ -381,15 +383,12 @@ img {
   background-color: var(--text-color-blck);
 }
 
-.footer-link:hover {
-  color: var(--accent-color);
-  transition: color 250ms var(--cubic);
-}
-
+.footer-link:hover, 
 .footer-link:focus {
   color: var(--accent-color);
-  transition: color 250ms var(--cubic);
 }
+
+
 .footer .logo {
   margin-bottom: 20px;
   display: block;
@@ -412,7 +411,7 @@ img {
 }
 /* Social-Footer */
 .footer-cta .socials-link {
-  fill: var(--text-color-wht);
+  
   background-color: rgba(255, 255, 255, 0.1);
 }
 .footer-cta .socials-link:hover,
@@ -420,6 +419,9 @@ img {
     background-color: var(--accent-color);
     transition: background-color 250ms var(--cubic);
 
+}
+.footer-cta .socials-icon{
+  fill: var(--text-color-wht);
 }
 
 /* Портфолио */
@@ -436,6 +438,9 @@ img {
   cursor: pointer;
   border: none;
   padding: 6px 22px;
+  transition: color 250ms var(--cubic),
+      box-shadow 250ms var(--cubic),
+      background-color 250ms var(--cubic);
 }
 .filter-list {
   display: flex;
@@ -453,9 +458,7 @@ img {
   color: var(--text-color-wht);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition: color 250ms var(--cubic),
-  box-shadow 250ms var(--cubic),
-  background-color 250ms var(--cubic);
+  
 }
 
 .filter-btn:focus {
@@ -463,9 +466,7 @@ img {
   color: var(--text-color-wht);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-    transition: color 250ms var(--cubic),
-    box-shadow 250ms var(--cubic),
-    background-color 250ms var(--cubic);
+    
 }
 
 .work-title {
@@ -490,6 +491,7 @@ img {
 .work-list .link {
   display: flex;
   flex-direction: column;
+  transition: box-shadow 250ms var(--cubic);
 }
 .work-list .work-item .link:hover,
 .work-list .work-item .link:focus {
@@ -518,12 +520,12 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 63px 24px;
   opacity: 0;
   transform: translateY(100%);
   background-color: var(--accent-color);
   color: var(--text-color-wht);
-  transition: transform 250ms linear;
+  transition: transform 250ms var(--cubic), opacity 250ms var(--cubic);
 }
 
 .work-link:hover .work-about,
@@ -546,11 +548,15 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: opacity 250ms var(--cubic), visibility 250ms var(--cubic);
 }
 .backdrop.is-hidden{
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+.backdrop.is-hidden .modal{
+  transform: scale(0);
 }
 .modal{
   position: relative;
@@ -559,6 +565,7 @@ img {
   background: #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  transition: transform 250ms var(--cubic);
 }
 .modal-btn{
   position: absolute;
